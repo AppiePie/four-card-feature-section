@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Four card feature section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --default-font-size: 15px;
+        --default-padding: 10px;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        font-size: var(--default-font-size);
+        color: hsl(229, 6%, 66%);
+      }
+      .wrapper {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .container {
+        display: grid;
+        gap: calc(4 * var(--default-padding));
+        margin: 5vh;
+      }
+      .hero {
+        text-align: center;
+      }
+      .hero-title strong,
+      .feature-title {
+        color: hsl(234, 12%, 34%);
+      }
+
+      .hero-title span {
+        font-weight: 400;
+        display: block;
+      }
+      .hero-description {
+        margin-top: var(--default-padding);
+      }
+      .features {
+        display: grid;
+        gap: calc(2 * var(--default-padding));
+      }
+      .features div {
+        background-color: hsl(0, 0%, 98%);
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+        border-radius: 2px;
+        padding: calc(2 * var(--default-padding));
+      }
+      .features img {
+        float: right;
+        margin-top: calc(2 * var(--default-padding));
+      }
+      .supervisor {
+        border-top: 2px solid hsl(180, 62%, 55%);
+      }
+      .builder {
+        border-top: 2px solid hsl(0, 78%, 62%);
+      }
+      .karma {
+        border-top: 2px solid hsl(34, 97%, 64%);
+      }
+      @media only screen and (min-width: 810px) {
+        .container {
+          margin: 10vw;
+        }
+        .hero-title {
+          font-size: calc(3 * var(--default-font-size));
+        }
+
+        .hero-description {
+          margin: 0 20vw;
+        }
+
+        .features {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-areas:
+            ". builder ."
+            "supervisor builder calculator"
+            "supervisor karma calculator"
+            ". karma .";
+        }
+        .builder {
+          grid-area: builder;
+        }
+        .supervisor {
+          grid-area: supervisor;
+        }
+        .calculator {
+          grid-area: calculator;
+        }
+        .karma {
+          grid-area: karma;
+        }
+      }
+      .calculator {
+        border-top: 2px solid hsl(212, 86%, 64%);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="container">
+        <section class="hero">
+          <h1 class="hero-title">
+            <span>Reliable, efficient delivery</span>
+            <strong>Powered by Technology</strong>
+          </h1>
+          <p class="hero-description">
+            Our Artificial Intelligence powered tools use millions of project
+            data points to ensure that your project is successful
+          </p>
+        </section>
+        <section class="features">
+          <div class="supervisor">
+            <h2 class="feature-title">Supervisor</h2>
+            <p class="feature-description">
+              Monitors activity to identify project roadblocks
+            </p>
+            <img src="images/icon-supervisor.svg" alt="supervisor" />
+          </div>
+          <div class="builder">
+            <h2 class="feature-title">Team Builder</h2>
+            <p class="feature-description">
+              Scans our talent network to create the optimal team for your
+              project
+            </p>
+            <img src="images/icon-team-builder.svg" alt="supervisor" />
+          </div>
+          <div class="karma">
+            <h2 class="feature-title">Karma</h2>
+            <p class="feature-description">
+              Regularly evaluates our talent to ensure quality
+            </p>
+            <img src="images/icon-karma.svg" alt="supervisor" />
+          </div>
+          <div class="calculator">
+            <h2 class="feature-title">Calculator</h2>
+            <p class="feature-description">
+              Uses data from past projects to provide better delivery estimates
+            </p>
+            <img src="images/icon-calculator.svg" alt="supervisor" />
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Minh Le</a>.
+      </p>
+    </footer>
+  </body>
+</html>
